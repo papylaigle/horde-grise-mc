@@ -71,6 +71,20 @@
             margin-top: 10px;
         }
 
+        .voice-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #d4af37;
+        }
+
         nav {
             display: flex;
             justify-content: center;
@@ -80,7 +94,6 @@
             padding: 20px;
             background: rgba(20,20,20,0.8);
             border: 2px solid #d4af37;
-            position: relative;
         }
 
         .voice-control {
@@ -398,11 +411,12 @@
             <div class="brand">LA HORDE GRISE</div>
         </header>
 
+        <div class="voice-control">
+            <button class="voice-btn" onclick="toggleSpeech()" id="voiceBtn" title="Lecture audio">🔊</button>
+            <button class="voice-btn" onclick="stopSpeech()" title="Arrêter la lecture">⏹️</button>
+        </div>
+
         <nav>
-            <div class="voice-control">
-                <button class="voice-btn" onclick="toggleSpeech()" id="voiceBtn" title="Lecture audio">🔊</button>
-                <button class="voice-btn" onclick="stopSpeech()" title="Arrêter la lecture">⏹️</button>
-            </div>
             <button class="nav-btn active" onclick="showSection('histoire')">I. Histoire</button>
             <button class="nav-btn" onclick="showSection('hierarchie')">II. Hiérarchie</button>
             <button class="nav-btn" onclick="showSection('reglement')">III. Règlement</button>
